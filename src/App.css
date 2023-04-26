@@ -1,38 +1,151 @@
 .App {
   text-align: center;
+  width: 99vw;
+  /* background-color: green; */
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/*Header Styles*/
+.header{
+  background-color: rgb(60, 0, 128);
   color: white;
+  border-radius: 4px;
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  min-height: 10vh;
 }
 
-.App-link {
-  color: #61dafb;
+.header > h1{
+  position: relative;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/*Searchbar styles*/
+.search-bar {
+  background-color: none;
+  border: 1px solid grey;
+  border-radius: 4px;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  min-height: 5vh;
 }
+
+.search-bar:focus-within {
+  border-color: blue;
+}
+
+.search-bar > input {
+  width: 97%;
+  height: 70%;
+  margin: 5px 0px;
+  border: none;
+}
+
+.search-bar > input:focus {
+  outline: none;
+}
+
+
+.search-bar > img {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+
+.input-form {
+  margin-top: 20px;
+  border: 1px solid grey;
+  min-height: 15vh;
+  border-radius: 4px;
+  /* display: flex; */
+}
+
+.input-form input {
+  margin: 10px 15px;
+  width: 15%;
+  width: 400px;
+  height: 35px;
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+
+.input-form input:focus {
+  outline: none;
+  border-color: blue;
+}
+
+.input-form input#date {
+  text-align: center;
+}
+
+.input-form #submitButton {
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  transition: 0.2s;
+  margin-bottom: 10px
+}
+
+.input-form #submitButton:hover {
+  cursor: pointer;
+  background-color: darkgrey;
+}
+
+.table-display {
+  margin-top: 20px;
+  /* border: 1px solid grey; */
+  /* min-height: 50vh; */
+  width: 99vw;
+  /* border-radius: 4px; */
+  /* justify-content: space-between; */
+}
+
+
+table, th, td {
+  border-collapse: collapse;
+  border: 1px solid grey;
+  margin: 0;
+  padding: 12px;
+}
+
+/* table {
+  border: 1px solid grey;
+  border-radius: 4px;
+} */
+
+
+th {
+  font-weight: bold;
+  background-color: white;
+}
+
+/* tr {
+  background-color: #f2f2f2;
+  width: 100%;
+  margin: 0;
+  
+} */ 
+
+
+/* td {
+  padding: 12px;
+  border: 1px solid grey;
+  margin: 0;
+  /* display: flex;
+  flex-direction: row; */
+  /* width: 100%; */
+/* } */
+
+/* Target all tr elements */
+
+/* Target the first td element in each row */
+/* tr td:first-child {
+  font-weight: bold;
+} */
