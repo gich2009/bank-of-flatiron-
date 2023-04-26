@@ -58,6 +58,7 @@ const endPoint = baseURL + "/transactions";
 
 function App() {
   const [transactions, setTransactions] = useState([]);
+  const [searchQuery, setSearchQuery]   = useState("");
 
   useEffect(() => {
     fetch(endPoint, {method: "GET"})
@@ -71,16 +72,13 @@ function App() {
     setTransactions([...transactions, newTransaction]);
   }
 
-  function searchTable(searchQuery){
-
-  }
 
   return (
     <div className="App">
       <Header headerText={"The Royal Bank of Flatiron"} />
-      <Searchbar placeholder={"Search your Recent Transactions"} onSearchTable={updateTable}/>
+      <Searchbar placeholder={"Search your Recent Transactions"} searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
       <Form onUpdateTable={updateTable}/>
-      <Table transactions={transactions}/>
+      <Table transactions={transactions} searchQuery={searchQuery}/>
     </div>
   );
 }

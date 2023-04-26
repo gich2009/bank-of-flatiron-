@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-function Searchbar({placeholder, onSearchTable}){
+function Searchbar({placeholder, searchQuery, setSearchQuery}){
   const [searchValue, setSearchValue] = useState("");
+  
+  useEffect(() =>{
+    // console.log(searchValue)
+    setSearchQuery(searchValue);
+  }, [searchValue, setSearchQuery]);
 
   return(
     <div className="search-bar">

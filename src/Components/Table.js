@@ -2,9 +2,10 @@ import React from "react";
 import Row from "./Row";
 
 
-function Table({transactions = []}){
+function Table({transactions = [], searchQuery = ""}){
 
-  const listOfTransactions = transactions.map((transaction) => (
+  const listOfTransactions =  transactions.filter( (transaction) => {console.log(searchQuery); return searchQuery === "" ? true : transaction["description"].includes(searchQuery)})
+  .map((transaction) => (
     <Row key={transaction["id"]} date={transaction["date"]} description={transaction["description"]} category={transaction["category"]} amount={transaction["amount"]} toggle={true}/>
   ));
 
