@@ -19,13 +19,13 @@ This application requires Node.js and npm installed on your local machine. Follo
 1. Clone the repository to your local machine using the following command:
 
     ```bash
-    git clone https://github.com/username/transaction-tracker-app.git
+    git clone https://github.com/username/bank-of-flatiron-.git
     ```
 
 2. Move into the project directory and install all required dependencies:
 
     ```bash
-    cd transaction-tracker-app
+    cd bank-of-flatiron-
     npm install
     ```
 
