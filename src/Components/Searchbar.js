@@ -4,8 +4,9 @@ function Searchbar({placeholder, searchQuery, setSearchQuery}){
   const [searchValue, setSearchValue] = useState("");
   
   useEffect(() =>{
-    // console.log(searchValue)
+
     setSearchQuery(searchValue);
+
   }, [searchValue, setSearchQuery]);
 
   return(
